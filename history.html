@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Search Me</title>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">Search Me</a>
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler" data-bs-target="#navbarSupportedContent"
+                    data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link active" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link active" href="./history.html">History</a>
+                    </li>
+                </ul>
+                <button class="border border-0" data-bs-target="#searchModal" data-bs-toggle="modal">
+                    <input aria-label="Search" class="form-control me-2" placeholder="Search" type="search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </button>
+            </div>
+        </div>
+    </nav>
+</header>
+<main class="d-flex flex-nowrap flex-column-reverse flex-md-row">
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Search in a huge library of words</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="searchForm" class="d-flex" role="search">
+                        <input required autocapitalize="words" name="search" aria-label="Search" class="form-control me-2" placeholder="Search" type="search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-body-tertiary my-2 mx-auto mx-md-0" style="width: 380px;">
+        <a href="/" class="d-flex align-items-center flex-shrink-0 p-3 link-body-emphasis text-decoration-none border-bottom">
+            <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            <span class="fs-5 fw-semibold">Search History</span>
+        </a>
+        <div id="cardContainer" class="list-group list-group-flush border-bottom scrollarea overflow-y-auto" style="height: 80vh">
+            <a id="card" class="list-group-item list-group-item-action py-3 lh-sm" aria-current="true">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                    <strong id="text" class="mb-1">List group item heading</strong>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="container my-2">
+        <div id="contentDiv" class="p-5 text-center bg-body-tertiary rounded-3">
+            <h1 id="title" class="text-body-emphasis">Nothing to show</h1>
+            <hr class="my-1"/>
+            <p id="description" class="lead overflow-y-auto " style="height: 65vh">
+                <button class="btn btn-primary btn-lg px-4 gap-3 my-4" type="button" data-bs-target="#searchModal" data-bs-toggle="modal">Search Word</button>
+            </p>
+        </div>
+    </div>
+</main>
+<script crossorigin="anonymous"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+<script src="./script.js" type="text/javascript"></script>
+</body>
+</html>
